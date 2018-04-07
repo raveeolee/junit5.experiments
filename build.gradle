@@ -1,0 +1,22 @@
+group 'junit5.selenium.experiments'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+ext.junitJupiterVersion  = '5.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JUnit Jupiter API and TestEngine implementation
+    testCompile("org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}")
+    testCompile("org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}")
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '2.41.0'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-chrome-driver', version: '3.11.0'
+}
+
+
